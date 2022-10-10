@@ -1,0 +1,203 @@
+$breakpoint-phone: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+
+
+body {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    padding: 30px;
+    font-size: 26px;
+    background-color: rgb(194, 194, 194);
+
+    .heading {
+        margin-top: 0px;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+
+    .form {
+        font-weight: 400;
+        font-size: 24px;
+
+        .row {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;       
+            gap: 5px;
+            
+            input {
+                border-radius: 5px;
+                border: grey;
+            }
+
+            .radio-group {
+                display: flex;
+
+                .radio-btn {
+                    display: flex;
+                    align-items: center
+                }
+            }
+        }
+
+        .cv-input {
+            display: flex;
+            flex-direction: column;
+
+            .upload {
+                display: flex;
+            }
+        }
+
+        a {
+            color: #ad0d25;
+            text-decoration-color: #ad0d25;
+        }
+
+        .submit-btn {
+            cursor: pointer;
+                margin-top: 30px;
+                padding: 1px 10px;
+                background-color: #e40d2c;
+                font-size: 20px;
+                width: fit-content;
+                
+                border-radius: 5px;
+        }
+
+        .submit-btn:hover {
+            background-color: #ad0d25;
+        }
+    }
+
+    .cv-input {
+
+        .upload {
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 0 1px 0 10px;
+            border: 1px solid #fff;
+            height: fit-content;
+            width: 720px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            border-radius: 5px;
+
+            input {
+                border: 1px solid red;
+                height: 40px;
+                width: 720px;
+                display: none;
+            }
+
+            .upload-btn {
+                cursor: pointer;
+                font-size: 18px;
+                padding: 0 10px;
+                background-color: black;
+                color: white;
+                height: fit-content;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .upload-btn:hover {
+                background-color: rgb(51, 50, 50);
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: $breakpoint-tablet)  {
+    .container {
+        
+        .form {
+            width: 720px;
+            
+            .row {
+                gap: 50px;
+        
+                .input {
+                    
+                    
+                    label{
+                        width: 280px;
+                    }
+    
+                    input {
+                        height: 40px;
+                        width: 280px;
+                        font-size: 20px;
+                    }
+    
+                    select {
+                        height: 40px;
+                        width: 288px;
+                        font-size: 20px;
+                        border-radius: 5px;
+                    }
+    
+                    .radio-group {
+                        display: flex;
+                        font-size: 20px;
+    
+                        input {
+                            width: 20px;
+                        }
+    
+                        label {
+                            width: 70px;
+                        }
+                    }
+                }
+                
+                
+                
+                .checkbox {
+                    font-size: 18px;
+                    
+                }
+            }
+    
+            .submit-btn {
+                font-size: 20px;
+            }
+    
+           
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .container {
+        .form {
+            width: 100%;
+            font-size: 16px;
+            .row {
+                gap: 30px;
+
+                .input {
+                    width: 150px;
+
+                }
+            }
+
+            .cv-input {
+               .upload {
+                width: 100%;
+               }
+            }
+        }
+    }
+}

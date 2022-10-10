@@ -1,0 +1,155 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding: 30px;
+  font-size: 26px;
+  background-color: rgb(194, 194, 194);
+}
+.container .heading {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.container .form {
+  font-weight: 400;
+  font-size: 24px;
+}
+.container .form .row {
+  display: flex;
+  margin-bottom: 20px;
+}
+.container .form .input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.container .form .input input {
+  border-radius: 5px;
+  border: grey;
+}
+.container .form .input .radio-group {
+  display: flex;
+}
+.container .form .input .radio-group .radio-btn {
+  display: flex;
+  align-items: center;
+}
+.container .form .cv-input {
+  display: flex;
+  flex-direction: column;
+}
+.container .form .cv-input .upload {
+  display: flex;
+}
+.container .form a {
+  color: #ad0d25;
+  -webkit-text-decoration-color: #ad0d25;
+          text-decoration-color: #ad0d25;
+}
+.container .form .submit-btn {
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 1px 10px;
+  background-color: #e40d2c;
+  font-size: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+}
+.container .form .submit-btn:hover {
+  background-color: #ad0d25;
+}
+.container .cv-input .upload {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 0 1px 0 10px;
+  border: 1px solid #fff;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.container .cv-input .upload input {
+  border: 1px solid red;
+  height: 40px;
+  width: 720px;
+  display: none;
+}
+.container .cv-input .upload .upload-btn {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 10px;
+  background-color: black;
+  color: white;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.container .cv-input .upload .upload-btn:hover {
+  background-color: rgb(51, 50, 50);
+}
+
+@media (min-width: 768px) {
+  .container .form {
+    width: 720px;
+  }
+  .container .form .row {
+    gap: 50px;
+  }
+  .container .form .row .input label {
+    width: 280px;
+  }
+  .container .form .row .input input {
+    height: 40px;
+    width: 280px;
+    font-size: 20px;
+  }
+  .container .form .row .input select {
+    height: 40px;
+    width: 288px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+  .container .form .row .input .radio-group {
+    display: flex;
+    font-size: 20px;
+  }
+  .container .form .row .input .radio-group input {
+    width: 20px;
+  }
+  .container .form .row .input .radio-group label {
+    width: 70px;
+  }
+  .container .form .row .checkbox {
+    font-size: 18px;
+  }
+  .container .form .submit-btn {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .container .form {
+    width: 100%;
+    font-size: 16px;
+  }
+  .container .form .row {
+    gap: 30px;
+  }
+  .container .form .row .input {
+    width: 150px;
+  }
+  .container .form .cv-input .upload {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */
