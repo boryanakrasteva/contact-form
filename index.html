@@ -10,108 +10,110 @@
     <title>Contact form</title>
 </head>
 <body>
-    <div class="container">
+    <div class="main">
+        <div class="container">
         
-        <div class="heading">
-            <label for="form">Форма за кандидатстване</label>
-        </div>
-
-        <div class="form">
-            <div class="row">
-                <div class="input">
-                    <label for="name">Име</label>
-                    <input type="text" id="name">
-                </div>
-                <div class="input">
-                    <label for="family-name">Фамилия</label>
-                    <input type="text" id="family-name">
-                </div>
+            <div class="heading">
+                <label for="form">Форма за кандидатстване</label>
             </div>
     
-            <div class="row">
-                <div class="input">
-                    <label for="email">Имейл</label>
-                    <input type="email" id="email">
+            <div class="form">
+                <div class="form__row">
+                    <div class="form__input">
+                        <label for="name">Име</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="form__input">
+                        <label for="family-name">Фамилия</label>
+                        <input type="text" id="family-name">
+                    </div>
                 </div>
-                <div class="input">
-                    <label for="phone">Телефон за връзка</label>
-                    <input type="phone" id="phone">
+        
+                <div class="form__row">
+                    <div class="form__input">
+                        <label for="email">Имейл</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="form__input">
+                        <label for="phone">Телефон за връзка</label>
+                        <input type="phone" id="phone">
+                    </div>
                 </div>
-            </div>
-    
-            <div class="row">
-                <div class="input">
-                    <label for="city">Град</label>
-                    <select name="city" id="city">
-                        <option value="city1">София</option>
-                        <option value="city2">Пловдив</option>
-                        <option value="city4">Варна</option>
-                    </select>
+        
+                <div class="form__row">
+                    <div class="form__input">
+                        <label for="city">Град</label>
+                        <select name="city" id="city">
+                            <option value="city1">София</option>
+                            <option value="city2">Пловдив</option>
+                            <option value="city4">Варна</option>
+                        </select>
+                    </div>
+                    <div class="form__input">
+                        <label for="restaurant">Ресторант</label>
+                        <select name="restaurant" id="restaurant">
+                            <option value="rest1">Ресторант 1</option>
+                            <option value="rest2">Ресторант 2</option>
+                            <option value="rest3">Ресторант 3</option>
+                            <option value="rest4">Ресторант 4</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="input">
-                    <label for="restaurant">Ресторант</label>
-                    <select name="restaurant" id="restaurant">
-                        <option value="rest1">Ресторант 1</option>
-                        <option value="rest2">Ресторант 2</option>
-                        <option value="rest3">Ресторант 3</option>
-                        <option value="rest4">Ресторант 4</option>
-                    </select>
-                </div>
-            </div>
-    
-            <!-- divider -->
-            <hr>
-    
-            <div class="row">
-                <div class="input">
-                    <label for="worktime">Предпочитано работно време</label>
-                    <select name="worktime" id="worktime">
-                        <option value="">12:00 - 22:00</option>
-                        <option value="">12:00 - 22:00</option>
-                        <option value="">12:00 - 22:00</option>
-                        <option value="">12:00 - 22:00</option>
-                    </select>
-                </div>
-                <div class="input">
-                    <label for="study">Продължавате ли образованието си в момента?</label>
-                    <div class="radio-group">
-                        <div class="radio-btn">
-                            <input type="radio" name="yes" id="">
-                            <label for="yes">Да</label>
-                        </div>
-                        <div class="radio-btn">
-                            <input type="radio" name="no" id="">
-                            <label for="yes">Не</label>
+        
+                <!-- divider -->
+                <hr>
+        
+                <div class="form__row">
+                    <div class="form__input">
+                        <label for="worktime">Предпочитано работно време</label>
+                        <select name="worktime" id="worktime">
+                            <option value="">12:00 - 22:00</option>
+                            <option value="">12:00 - 22:00</option>
+                            <option value="">12:00 - 22:00</option>
+                            <option value="">12:00 - 22:00</option>
+                        </select>
+                    </div>
+                    <div class="form__input">
+                        <label for="study">Продължавате ли образованието си в момента?</label>
+                        <div class="radio-group">
+                            <div class="radio-group__btn">
+                                <input type="radio" name="yes" id="">
+                                <label for="yes">Да</label>
+                            </div>
+                            <div class="radio-group__btn">
+                                <input type="radio" name="no" id="">
+                                <label for="yes">Не</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-    
-            <div class="row">
-                <div class="cv-input">
-                    <label for="cv">Прикачи CV</label>
-                    
-                    <div class="upload">
-                        <input type="file" id="cv">
-                        <label for="file">Изберете файл...</label>
-                        <div class="upload-btn"><p>Прикачи файл</p></div>
+        
+                <div class="form__row">
+                    <div class="cv-input">
+                        <label for="cv">Прикачи CV</label>
+                        
+                        <div class="upload">
+                            <input type="file" id="cv">
+                            <label for="file">Изберете файл...</label>
+                            <div class="upload__btn"><p>Прикачи файл</p></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-    
-            <!-- divider -->
-            <hr>
-    
-            <div class="row">
-                <div class="checkbox">
-                    <input type="checkbox" name="" id="">
-                    <label for="checkbox">Съгласен/на съм предоставените от мен лични данни да бъдат обработвани от <a href="">линк тук</a>.</label>
+        
+                <!-- divider -->
+                <hr>
+        
+                <div class="form__row">
+                    <div class="checkbox">
+                        <input type="checkbox" name="" id="">
+                        <label for="checkbox">Съгласен/на съм предоставените от мен лични данни да бъдат обработвани от <a href="">линк тук</a>.</label>
+                    </div>
                 </div>
+        
+                <div class="form__submit">
+                    <p>Бутон за събмитване</p>
+                </button>
             </div>
-    
-            <div class="submit-btn">
-                <p>Бутон за събмитване</p>
-            </button>
         </div>
     </div>
 </body>
