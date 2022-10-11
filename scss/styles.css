@@ -45,7 +45,6 @@ input:not([type=radio]):not([type=checkbox]):focus {
 }
 
 select {
-  height: 30px;
   font-size: 16px;
   border-radius: 5px;
 }
@@ -61,10 +60,11 @@ select:focus {
 .radio-group .radio-group__btn {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .checkbox {
-  gap: 20px;
+  gap: 10px;
 }
 .checkbox label {
   cursor: pointer;
@@ -128,6 +128,7 @@ select:focus {
 .checkbox {
   display: flex;
   align-items: center;
+  align-items: center;
   font-size: 16px;
 }
 .checkbox a {
@@ -136,7 +137,7 @@ select:focus {
           text-decoration-color: #ad0d25;
 }
 
-@media (min-width: 320px) and (max-width: 520px) {
+@media (min-width: 200px) and (max-width: 520px) {
   .form {
     width: 100%;
     font-size: smaller;
@@ -518,4 +519,23 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+.select2,
+.select2-search__field,
+.select2-results__option {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em !important;
+}
+
+.select2-selection__rendered {
+  line-height: 2em !important;
+}
+
+.select2-container .select2-selection--single {
+  height: 2em !important;
+}
+
+.select2-selection__arrow {
+  height: 2em !important;
 }/*# sourceMappingURL=styles.css.map */

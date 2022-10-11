@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    
+    <!-- select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="./js/main.js"></script>
     <link rel="stylesheet" href="./scss/styles.css">
-    <script src="//unpkg.com/alpinejs" defer></script>
+    
     <title>Contact form</title>
 </head>
+
 <body>
     <div class="main">
         <div class="container">
-        
+
             <div class="heading">
                 <label for="form">Форма за кандидатстване</label>
             </div>
-    
+
             <div class="form">
                 <div class="form__row">
                     <div class="form__input">
@@ -28,7 +38,7 @@
                         <input type="text" id="family-name">
                     </div>
                 </div>
-        
+
                 <div class="form__row">
                     <div class="form__input">
                         <label for="email">Имейл</label>
@@ -39,11 +49,12 @@
                         <input type="phone" id="phone">
                     </div>
                 </div>
-        
+
                 <div class="form__row">
                     <div class="form__input">
                         <label for="city">Град</label>
                         <select name="city" id="city">
+                            <option></option>
                             <option value="city1">София</option>
                             <option value="city2">Пловдив</option>
                             <option value="city4">Варна</option>
@@ -52,6 +63,7 @@
                     <div class="form__input">
                         <label for="restaurant">Ресторант</label>
                         <select name="restaurant" id="restaurant">
+                            <option></option>
                             <option value="rest1">Ресторант 1</option>
                             <option value="rest2">Ресторант 2</option>
                             <option value="rest3">Ресторант 3</option>
@@ -59,10 +71,10 @@
                         </select>
                     </div>
                 </div>
-        
+
                 <!-- divider -->
                 <hr>
-        
+
                 <div class="form__row">
                     <div class="form__input">
                         <label for="worktime">Предпочитано работно време</label>
@@ -87,34 +99,38 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form__row">
                     <div class="cv-input">
                         <label for="cv">Прикачи CV</label>
-                        
+
                         <div class="upload">
                             <input type="file" id="cv">
                             <label for="file">Изберете файл...</label>
-                            <div class="upload__btn"><p>Прикачи файл</p></div>
+                            <div class="upload__btn">
+                                <p>Прикачи файл</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-        
+
                 <!-- divider -->
                 <hr>
-        
+
                 <div class="form__row">
                     <div class="checkbox">
                         <input type="checkbox" name="" id="checkbox">
-                        <label for="checkbox">Съгласен/на съм предоставените от мен лични данни да бъдат обработвани от <a href="">линк тук</a>.</label>
+                        <label for="checkbox">Съгласен/на съм предоставените от мен лични данни да бъдат обработвани от
+                            <a href="">линк тук</a>.</label>
                     </div>
                 </div>
-        
+
                 <div class="form__submit">
                     <p>Бутон за събмитване</p>
-                </button>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 </body>
+
 </html>

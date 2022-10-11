@@ -62,7 +62,6 @@ input:not([type='radio']):not([type='checkbox']):focus {
 }
 
 select {
-    height: $input-height;
     font-size: $input-fontsize;
     border-radius: $border-radius;
 }
@@ -77,12 +76,13 @@ select:focus {
 
     .radio-group__btn {
         display: flex;
-        align-items: center
+        align-items: center;
+        gap: 10px;
     }
 }
 
 .checkbox {
-    gap: 20px;
+    gap: 10px;
 
     label {
         cursor: pointer;
@@ -144,6 +144,7 @@ select:focus {
 .checkbox {
     display: flex;
     align-items: center;
+    align-items: center;
     font-size: $input-fontsize;
 
     a {
@@ -152,7 +153,7 @@ select:focus {
     }
 }
 
-@media (min-width: 320px) and (max-width: $breakpoint-phone) {
+@media (min-width: 200px) and (max-width: $breakpoint-phone) {
     .form {
         width: 100%;
         font-size: smaller;
