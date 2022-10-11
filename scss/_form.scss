@@ -1,24 +1,35 @@
-$breakpoint-phone: 600px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$breakpoint-phone: 520px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 992px;
 
-$label-fontsize: 24px;
-$input-fontsize: 18px;
+$label-fontsize: 20px;
+$input-fontsize: 16px;
 $input-height: 30px;
 $border-radius: 5px;
 $rows-margin: 30px;
 
 $desktop-width: 280px;
 
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .main {
     display: flex;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
     padding: 30px;
     font-size: $label-fontsize;
     background-color: rgb(194, 194, 194);
+    display: flex;
+    flex-direction: column;
 
     .heading {
         font-weight: bold;
@@ -30,6 +41,11 @@ input {
     border-radius: $border-radius;
     border: grey;
     height: $input-height;
+    padding-left: 10px;
+}
+
+input:not([type='radio']):not([type='checkbox']):focus {
+    outline: 2px solid #e40d2c;
 }
 
 .form {
@@ -47,13 +63,17 @@ input {
 
 select {
     height: $input-height;
-    width: auto;
     font-size: $input-fontsize;
     border-radius: $border-radius;
 }
 
+select:focus {
+    outline: 2px solid #E40D2B;
+}
+
 .radio-group {
     display: flex;
+    gap: 30px;
 
     .radio-group__btn {
         display: flex;
@@ -61,14 +81,26 @@ select {
     }
 }
 
+.checkbox {
+    gap: 20px;
+
+    label {
+        cursor: pointer;
+    }
+}
+
 .form__submit {
     cursor: pointer;
     margin-top: $rows-margin;
+    margin-left: 25px;
     padding: 1px 10px;
-    background-color: #e40d2c;
+    background-color: #E40D2B;
     font-size: $input-fontsize;
     width: fit-content;
     border-radius: $border-radius;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
 }
 
 .form__submit:hover {
@@ -81,7 +113,6 @@ select {
     padding: 0 1px 0 10px;
     border: 1px solid #fff;
     height: fit-content;
-    width: 720px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -121,28 +152,66 @@ select {
     }
 }
 
-
-
-@media (max-width: $breakpoint-tablet) {
+@media (min-width: 320px) and (max-width: $breakpoint-phone) {
     .form {
         width: 100%;
-        font-size: $input-fontsize;
+        font-size: smaller;
+        justify-content: center;
+        
 
         .form__row {
-            gap: 30px;
+            flex-direction: column;
+            margin: 0;
+        }
+    }
 
-            .form__input {
-                width: 150px;
-            }
+    .form__input {
+        margin-bottom: 10px;
+    }
+
+    .cv-input {
+        width: 100%;
+
+        .upload {
+            width: auto;
+        }
+    }
+
+    .form__submit {
+        margin-left: 0px;
+        width: auto;
+    }
+
+    
+}
+
+@media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet) {
+    .form {
+        font-size: smaller;
+    }
+
+    .form__row {
+        justify-content: space-around;
+        gap: $rows-margin;
+
+        .form__input {
+            width: 100%;
         }
     }
 
     .cv-input {
+        width: 100%;
+
         .upload {
-            width: 100%;
+            width: auto;
         }
     }
+
+    
+   
+    
 }
+
 
 @media (min-width: $breakpoint-tablet) {
     .form {
@@ -177,5 +246,15 @@ select {
                 width: 70px;
             }
         }
+    }
+
+    .cv-input {
+        width: 100%;
+
+        
+    }
+
+    select {
+        width: $desktop-width;
     }
 }
